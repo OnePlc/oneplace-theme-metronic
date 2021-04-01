@@ -1,0 +1,15 @@
+{
+  "name": "metronic",
+  "description": "Metronic is a responsive Bootstrap 4 administrator dashboard theme by keenthemes",
+  "version": "1.0.0",
+  "author": "oneplace",
+  "template": {
+    "author": "keenthemes"
+  },
+  "keywords": [
+    "metronic",
+    "premium",
+    "bootstrap",
+    "bootstrap4"
+  ]
+}
