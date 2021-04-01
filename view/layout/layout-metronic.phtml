@@ -83,6 +83,21 @@ $aUserXPInfo = $oUser->getExperience();
                 <!--begin::Content-->
                 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
                     <?=$this->partial('theme/metronic/subheader', []); ?>
+                    <?php
+                    /**
+                     * Print Flashmessenger messages (alerts)
+                     */
+                    $flash = $this->flashMessenger();
+                    $flash->setMessageOpenFormat('<div%s style="">
+                                 <ul><li>')
+                        ->setMessageSeparatorString('</li><li>')
+                        ->setMessageCloseString('</li></ul></div>');
+                    echo $flash->render('error',   ['alert', 'alert-dismissible', 'alert-danger', 'alert-plc']);
+                    echo $flash->render('info',    ['alert', 'alert-dismissible', 'alert-info', 'alert-plc']);
+                    echo $flash->render('default', ['alert', 'alert-dismissible', 'alert-info', 'alert-plc']);
+                    echo $flash->render('warning', ['alert', 'alert-dismissible', 'alert-warning', 'alert-plc']);
+                    echo $flash->render('success', ['alert', 'alert-dismissible', 'alert-success', 'alert-plc']);?>
+
                     <div class="container">
                         <?php
                         #echo $this->partial('theme/metronic/content_demo', []);
